@@ -14,7 +14,13 @@ public class Line {
 		this.x2 = x2;
 		this.y2 = y2;
 	}
-	
-	
+	@Override
+	public boolean equals(Object ob) {
+		Line obj = (Line)ob;
+	    if(obj.x1 == this.x1 && obj.x2 == this.x2 && obj.y1 == this.y1 && obj.y2 == this.y2 )
+		return true;
+	    else
+	    	return false;
+	}
 	
 }
