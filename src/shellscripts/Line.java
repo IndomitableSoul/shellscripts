@@ -1,6 +1,6 @@
 package shellscripts;
 
-public class Line {
+public class Line implements Comparable{
 	int x1 ;
 	int y1 ;
 	int x2 ;
@@ -22,5 +22,11 @@ public class Line {
 	    else
 	    	return false;
 	}
+	@Override
+	public int compareTo(Object o) {
+		Line obj = (Line)o;
+		return (int)(this.lengthOfLine - obj.lengthOfLine);
+	}
+	
 	
 }
